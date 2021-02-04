@@ -10,6 +10,8 @@ def translate(w):
         answer = input("Did you mean %s instead? (y or n) " % get_close_matches(w, data.keys())[0])
         if answer == 'y':
             return(translate(get_close_matches(w, data.keys())[0]))
+        elif answer == 'n':
+            return("Please try again. The word doesn't exist.\n")
     else:
         return("Please try again. The word doesnt exist.")
 
