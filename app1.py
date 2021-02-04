@@ -12,6 +12,9 @@ def translate(w):
             return(translate(get_close_matches(w, data.keys())[0]))
         elif answer == 'n':
             return("Please try again. The word doesn't exist.\n")
+        else:
+            #if the user enters neither Y nor N
+            return("We didn't understand your entry.\n")
     else:
         return("Please try again. The word doesnt exist.")
 
